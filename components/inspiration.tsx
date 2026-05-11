@@ -102,7 +102,7 @@ export function Inspiration() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className="object-cover object-top"
                   style={{ objectPosition: item.position }}
                 />
                 <Watermark />
