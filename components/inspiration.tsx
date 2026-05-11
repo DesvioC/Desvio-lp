@@ -11,7 +11,7 @@ const inspirations = [
     position: "center 40%",
   },
   {
-    title: "Morango com Chantilly",
+    title: "Chantilly Morango",
     description: "Doçura irresistível em forma de vela",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/morango-Lh2CLGalKxGDBiXnlhLVAXnapGrmiD.png",
     position: "center 15%",
