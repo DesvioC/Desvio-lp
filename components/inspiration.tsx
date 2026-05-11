@@ -102,7 +102,7 @@ export function Inspiration() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover object-top"
+                  className="object-cover"
                   style={{ objectPosition: item.position }}
                 />
                 <Watermark />
