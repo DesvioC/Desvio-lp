@@ -97,7 +97,7 @@ export function Inspiration() {
               key={item.title}
               className="group overflow-hidden border-[#d4c9ae] hover:shadow-xl transition-all duration-300"
             >
-              <div className="aspect-[4/5] relative overflow-hidden bg-[#f2ede4]">
+              <div className="aspect-square relative overflow-hidden bg-[#f2ede4]">
                 <Image
                   src={item.image}
                   alt={item.title}
