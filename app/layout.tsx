@@ -35,6 +35,9 @@ export const metadata: Metadata = {
       },
     ],
     apple: '/apple-icon.png',
+  },  
+  openGraph: {
+    images: ['/og-image.png'],
   },
 }
 
