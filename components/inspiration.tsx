@@ -14,7 +14,7 @@ const inspirations = [
     title: "Morango com Chantilly",
     description: "Doçura irresistível em forma de vela",
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/morango-Lh2CLGalKxGDBiXnlhLVAXnapGrmiD.png",
-    position: "center 35%",
+    position: "center 40%",
   },
   {
     title: "Dia das Mães - Flor de Cerejeira",
