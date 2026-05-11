@@ -29,7 +29,7 @@ export function About() {
                 alt="Produção artesanal de velas DESVIO"
                 fill
                 className="object-cover"
-                style={{ objectPosition: 'center 15%' }}
+                style={{ objectPosition: 'center bottom' }}
               />
               {/* Watermark */}
               <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
