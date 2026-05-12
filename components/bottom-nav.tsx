@@ -5,8 +5,8 @@ import { ShoppingBag, Sparkles, Gift, MessageCircle } from "lucide-react";
 
 const links = [
   { href: "#produtos", label: "Produtos", icon: ShoppingBag },
-  { href: "#inspiracao", label: "Inspire-se", icon: Sparkles },
   { href: "#personalizados", label: "Criar", icon: Gift },
+  { href: "#inspiracao", label: "Inspire-se", icon: Sparkles },
   { href: "#contato", label: "Contato", icon: MessageCircle },
 ];
 
@@ -18,14 +18,19 @@ export function BottomNav() {
     const handleScroll = () => {
       setVisible(window.scrollY > 300);
 
-      const sections = links.map((l) => l.href.replace("#", ""));
-      for (const id of [...sections].reverse()) {
-        const el = document.getElementById(id);
-        if (el && el.getBoundingClientRect().top <= 120) {
-          setActive(`#${id}`);
-          break;
-        }
-      }
+     const sections = links.map((l) => l.href.replace("#", ""));
+
+for (const id of sections) {
+  const el = document.getElementById(id);
+  if (el) {
+    const rect = el.getBoundingClientRect();
+
+    if (rect.top <= 150 && rect.bottom >= 150) {
+      setActive(`#${id}`);
+      break;
+    }
+  }
+}
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
