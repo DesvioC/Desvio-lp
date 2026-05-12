@@ -176,7 +176,78 @@ export function Products() {
             />
           ))}
         </div>
+{selectedProduct && (
+  <div
+  className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm"
+  onClick={() => setSelectedProduct(null)}
+>
 
+    <div
+  className="bg-white w-[90%] max-w-sm rounded-2xl p-6 shadow-2xl animate-in fade-in zoom-in-95 duration-200"
+  onClick={(e) => e.stopPropagation()}
+>
+
+      <h3 className="font-serif text-xl font-bold text-[#1b2d4f] mb-2 text-center">
+        {selectedProduct.name}
+      </h3>
+
+      <p className="text-xs text-[#2f5d8c] text-center mb-5">
+        Personalize sua vela
+      </p>
+
+      <div className="mb-3">
+        <label className="text-xs text-[#2f5d8c] mb-1 block">Aroma</label>
+        <select
+          value={aroma}
+          onChange={(e) => setAroma(e.target.value)}
+          className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
+        >
+          <option value="">Selecione um aroma</option>
+          <option>Madeira Negra</option>
+          <option>Flor de Cerejeira</option>
+          <option>Baunilha</option>
+        </select>
+      </div>
+
+      <div className="mb-5">
+        <label className="text-xs text-[#2f5d8c] mb-1 block">Decoração</label>
+        <select
+          value={decoracao}
+          onChange={(e) => setDecoracao(e.target.value)}
+          className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
+        >
+          <option value="">Selecione a decoração</option>
+          <option>Com cristais</option>
+          <option>Minimalista</option>
+          <option>Personalizada</option>
+        </select>
+      </div>
+
+     <a
+  href={`https://wa.me/5519981338845?text=${encodeURIComponent(
+    `Oi! Quero pedir:\nProduto: ${selectedProduct.name}\nAroma: ${aroma || "não definido"}\nDecoração: ${decoracao || "não definida"}`
+  )}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className={`block text-center py-2.5 rounded-full font-medium transition-colors ${
+    aroma && decoracao
+      ? "bg-[#1b2d4f] text-[#f2ede4] hover:bg-[#2f5d8c]"
+      : "bg-gray-300 text-gray-500 pointer-events-none"
+  }`}
+>
+  Confirmar pedido
+</a>
+
+      <button
+        onClick={() => setSelectedProduct(null)}
+        className="mt-3 text-xs text-[#2f5d8c] w-full text-center"
+      >
+        Cancelar
+      </button>
+
+    </div>
+  </div>
+)}
       </div>
     </section>
   );
