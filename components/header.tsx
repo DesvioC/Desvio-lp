@@ -25,8 +25,9 @@ export function Header() {
 
   const navLinks = [
   { href: "#produtos", label: "Produtos" },
-  { href: "#inspiracao", label: "Inspire-se" },
+  { href: "#aromas", label: "Aromas" },
   { href: "#decoracoes", label: "Decorações" },
+  { href: "#inspiracao", label: "Inspire-se" },
   { href: "#personalizados", label: "Personalizados" },
 ];
 
