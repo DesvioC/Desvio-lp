@@ -27,8 +27,9 @@ export function Header() {
   { href: "#produtos", label: "Produtos" },
   { href: "#aromas", label: "Aromas" },
   { href: "#decoracoes", label: "Decorações" },
-  { href: "#inspiracao", label: "Inspire-se" },
   { href: "#personalizados", label: "Personalizados" },
+  { href: "#inspiracao", label: "Inspire-se" },
+
 ];
 
   return (
