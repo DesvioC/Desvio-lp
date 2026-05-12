@@ -53,6 +53,7 @@ export default function RootLayout({
       <body className={`${playfair.variable} ${inter.variable} font-sans antialiased`}>
         {children}
         <ScrollToTop />
+        <BottomNav />
         {process.env.NODE_ENV === 'production' && <Analytics />}
       </body>
     </html>
