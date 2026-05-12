@@ -115,11 +115,23 @@ export function Inspiration() {
               </div>
               <CardContent className="p-4 bg-white">
                 <h3 className="font-serif text-base font-bold text-[#1b2d4f] mb-1">
-                  {item.title}
-                </h3>
-                <p className="text-xs text-[#2f5d8c]">
-                  {item.description}
-                </p>
+  {item.title}
+</h3>
+
+<p className="text-xs text-[#2f5d8c] mb-3">
+  {item.description}
+</p>
+
+<a
+  href={`https://wa.me/5519981338845?text=${encodeURIComponent(
+  `Oi! Quero pedir uma vela como a "${item.title}"`
+)}`}
+  target="_blank"
+  rel="noopener noreferrer"
+  className="inline-block text-xs font-medium text-[#1b2d4f] border border-[#d4c9ae] px-3 py-1.5 rounded-full hover:bg-[#f2ede4] transition-colors"
+>
+  Quero pedir
+</a>
               </CardContent>
             </Card>
           ))}
