@@ -50,24 +50,44 @@ export function BottomNav() {
         {links.map(({ href, label, icon: Icon }) => {
           const isActive = active === href;
           return (
-            <Link
-              key={href}
-              href={href}
-              className={`
-                flex flex-col items-center justify-center gap-1
-                py-3 px-2 flex-1 text-center
-                transition-colors duration-200
-                ${isActive ? "text-[#f2ede4]" : "text-[#f2ede4]/50"}
-              `}
-            >
-              <Icon
-                className={`w-5 h-5 transition-transform duration-200 ${isActive ? "scale-110" : ""}`}
-              />
-              <span className="text-[10px] font-medium leading-none">{label}</span>
-              {isActive && (
-                <span className="absolute bottom-1 w-1 h-1 rounded-full bg-[#f2ede4]" />
-              )}
-            </Link>
+<Link
+  key={href}
+  href={href}
+  onClick={(e) => {
+    e.preventDefault();
+
+    const el = document.querySelector(href);
+    if (el) {
+      const y = el.getBoundingClientRect().top + window.scrollY - 80;
+
+      window.scrollTo({
+        top: y,
+        behavior: "smooth",
+      });
+    }
+  }}
+  className={`
+    relative
+    flex flex-col items-center justify-center gap-1
+    py-3 px-2 flex-1 text-center
+    transition-colors duration-200
+    ${isActive ? "text-[#f2ede4]" : "text-[#f2ede4]/50"}
+  `}
+>
+  <Icon
+    className={`w-5 h-5 transition-transform duration-200 ${
+      isActive ? "scale-110" : ""
+    }`}
+  />
+
+  <span className="text-[10px] font-medium leading-none">
+    {label}
+  </span>
+
+  {isActive && (
+    <span className="absolute bottom-1 w-1 h-1 rounded-full bg-[#f2ede4]" />
+  )}
+</Link>
           );
         })}
       </div>
