@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, ChevronRight } from "lucide-react";
@@ -68,6 +68,21 @@ export function Products() {
   const [selectedProduct, setSelectedProduct] = useState<any>(null);
   const [aroma, setAroma] = useState("");
   const [decoracao, setDecoracao] = useState("");
+  useEffect(() => {
+  const saved = sessionStorage.getItem("desvioConfig");
+
+  if (saved) {
+    const data = JSON.parse(saved);
+
+    setSelectedProduct(data.product);
+    setAroma(data.aroma || "");
+    setDecoracao(data.decoracao || "");
+
+    setTimeout(() => {
+  sessionStorage.removeItem("desvioConfig");
+}, 500);
+  }
+}, []);
 
   const handleScroll = () => {
     if (!scrollRef.current) return;
@@ -209,15 +224,25 @@ export function Products() {
         </select>
         <p className="text-[11px] mt-1">
   <button
-    onClick={() => {
-      setSelectedProduct(null);
-      setTimeout(() => {
-        const el = document.getElementById("aromas");
-        if (el) {
-          el.scrollIntoView({ behavior: "smooth" });
-        }
-      }, 150);
-    }}
+onClick={() => {
+  sessionStorage.setItem(
+    "desvioConfig",
+    JSON.stringify({
+      product: selectedProduct,
+      aroma,
+      decoracao,
+    })
+  );
+
+  setSelectedProduct(null);
+
+  setTimeout(() => {
+    const el = document.getElementById("aromas");
+    if (el) {
+      el.scrollIntoView({ behavior: "smooth" });
+    }
+  }, 150);
+}}
     className="text-[#2a7a72] underline hover:text-[#1b2d4f] transition-colors"
   >
     Ver detalhes sobre aromas
@@ -241,14 +266,23 @@ export function Products() {
    <p className="text-[11px] mt-1">
     <button
       onClick={() => {
-        setSelectedProduct(null);
-        setTimeout(() => {
-          const el = document.getElementById("decoracoes");
-          if (el) {
-            el.scrollIntoView({ behavior: "smooth" });
-          }
-        }, 150);
-      }}
+  sessionStorage.setItem(
+    "desvioConfig",
+    JSON.stringify({
+      product: selectedProduct,
+      aroma,
+      decoracao,
+    })
+  );
+
+  setSelectedProduct(null);
+
+  setTimeout(() => {
+    document
+      .getElementById("decoracoes")
+      ?.scrollIntoView({ behavior: "smooth" });
+  }, 150);
+}}
       className="text-[#2a7a72] underline hover:text-[#1b2d4f] transition-colors"
     >
       Ver detalhes sobre decorações
