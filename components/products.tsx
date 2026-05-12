@@ -207,20 +207,53 @@ export function Products() {
           <option>Flor de Cerejeira</option>
           <option>Baunilha</option>
         </select>
-      </div>
+        <p className="text-[11px] mt-1">
+  <button
+    onClick={() => {
+      setSelectedProduct(null);
+      setTimeout(() => {
+        const el = document.getElementById("aromas");
+        if (el) {
+          el.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 150);
+    }}
+    className="text-[#2a7a72] underline hover:text-[#1b2d4f] transition-colors"
+  >
+    Ver detalhes sobre aromas
+  </button>
+</p>
 
-      <div className="mb-5">
-        <label className="text-xs text-[#2f5d8c] mb-1 block">Decoração</label>
-        <select
-          value={decoracao}
-          onChange={(e) => setDecoracao(e.target.value)}
-          className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
-        >
-          <option value="">Selecione a decoração</option>
-          <option>Com cristais</option>
-          <option>Minimalista</option>
-          <option>Personalizada</option>
-        </select>
+</div>
+
+<div className="mb-5">
+  <label className="text-xs text-[#2f5d8c] mb-1 block">Decoração</label>
+  <select
+    value={decoracao}
+    onChange={(e) => setDecoracao(e.target.value)}
+    className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
+  >
+    <option value="">Selecione a decoração</option>
+    <option>Com cristais</option>
+    <option>Minimalista</option>
+    <option>Personalizada</option>
+  </select>
+   <p className="text-[11px] mt-1">
+    <button
+      onClick={() => {
+        setSelectedProduct(null);
+        setTimeout(() => {
+          const el = document.getElementById("decoracoes");
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth" });
+          }
+        }, 150);
+      }}
+      className="text-[#2a7a72] underline hover:text-[#1b2d4f] transition-colors"
+    >
+      Ver detalhes sobre decorações
+    </button>
+  </p>
       </div>
 
      <a
