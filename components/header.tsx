@@ -24,11 +24,11 @@ export function Header() {
   }, [isOpen]);
 
   const navLinks = [
-    { href: "#produtos", label: "Produtos" },
-    { href: "#aromas", label: "Aromas" },
-    { href: "#decoracoes", label: "Decorações" },
-    { href: "#personalizados", label: "Personalizados" },
-  ];
+  { href: "#produtos", label: "Produtos" },
+  { href: "#inspiracao", label: "Inspire-se" },
+  { href: "#decoracoes", label: "Decorações" },
+  { href: "#personalizados", label: "Personalizados" },
+];
 
   return (
     <header
