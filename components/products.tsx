@@ -1,9 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { useRef, useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Clock } from "lucide-react";
+import { Clock, ChevronRight } from "lucide-react";
 
 const products = [
   {
@@ -61,6 +62,16 @@ const products = [
 ];
 
 export function Products() {
+  const scrollRef = useRef<HTMLDivElement>(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const handleScroll = () => {
+    if (!scrollRef.current) return;
+    const scrollLeft = scrollRef.current.scrollLeft;
+    const cardWidth = scrollRef.current.offsetWidth * 0.8;
+    setActiveIndex(Math.round(scrollLeft / cardWidth));
+  };
+
   return (
     <section id="produtos" className="py-24 bg-[#d4c9ae]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -76,11 +87,22 @@ export function Products() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        {/* Indicador mobile */}
+        <div className="flex items-center gap-2 text-[#2f5d8c] text-sm mb-3 md:hidden">
+          <span>Deslize para ver mais</span>
+          <ChevronRight className="w-4 h-4 animate-bounce-x" />
+        </div>
+
+        {/* Carrossel mobile / Grid desktop */}
+        <div
+          ref={scrollRef}
+          onScroll={handleScroll}
+          className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 md:overflow-visible scrollbar-hide"
+        >
           {products.map((product) => (
             <Card
               key={product.name}
-              className="group bg-white border-[#d4c9ae] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden"
+              className="group bg-white border-[#d4c9ae] hover:shadow-xl transition-all duration-300 hover:-translate-y-1 overflow-hidden snap-start shrink-0 w-[80vw] sm:w-auto"
             >
               <div className="aspect-square relative overflow-hidden">
                 <Image
@@ -90,7 +112,6 @@ export function Products() {
                   className="object-cover object-top group-hover:scale-105 transition-transform duration-500"
                   style={{ objectPosition: 'center 15%' }}
                 />
-                {/* Watermark */}
                 <div className="absolute inset-0 flex items-center justify-center pointer-events-none z-10">
                   <Image
                     src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/SIMBOLO%20MARCA-B3yJptOB1aAJxEUB1GfHhhNBIzLPfG.png"
@@ -134,23 +155,32 @@ export function Products() {
                     </p>
                   </div>
                 </div>
-                
                 <p className="text-sm text-[#2f5d8c] mb-4">
                   {product.description}
                 </p>
-                
                 {product.highlight && (
                   <Badge variant="outline" className="mb-4 border-[#a898c0] text-[#a898c0]">
                     {product.highlight}
                   </Badge>
                 )}
-                
                 <div className="flex items-center gap-2 text-xs text-[#2f5d8c]">
                   <Clock className="w-4 h-4" />
                   <span>Prazo de produção: {product.productionTime}</span>
                 </div>
               </CardContent>
             </Card>
+          ))}
+        </div>
+
+        {/* Bolinhas indicadoras mobile */}
+        <div className="flex justify-center gap-2 mt-4 md:hidden">
+          {products.map((_, i) => (
+            <div
+              key={i}
+              className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                i === activeIndex ? "bg-[#1b2d4f] w-4" : "bg-[#d4c9ae]"
+              }`}
+            />
           ))}
         </div>
       </div>
