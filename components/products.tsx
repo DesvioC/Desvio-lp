@@ -111,33 +111,56 @@ export function Products() {
                 />
               </div>
 
-              <CardContent className="p-6">
-                
-                <h3 className="font-serif text-xl font-bold text-[#1b2d4f]">
-                  {product.name}
-                </h3>
+<CardContent className="p-6">
+  <div className="flex items-start justify-between mb-3">
+    <div>
+      <h3 className="font-serif text-xl font-bold text-[#1b2d4f]">
+        {product.name}
+      </h3>
+      <p className="text-sm text-[#2f5d8c]">{product.weight}</p>
+    </div>
 
-                <p className="text-sm text-[#2f5d8c] mb-4">
-                  {product.description}
-                </p>
+    <div className="text-right">
+      {product.originalPrice && (
+        <p className="text-sm text-[#2f5d8c] line-through">
+          R$ {product.originalPrice}
+        </p>
+      )}
+      <p className="text-2xl font-bold text-[#2a7a72]">
+        R$ {product.price}
+      </p>
+    </div>
+  </div>
 
-                <button
-                  onClick={() => {
-                    setSelectedProduct(product);
-                    setAroma("");
-                    setDecoracao("");
-                  }}
-                  className="mt-4 w-full text-sm font-medium bg-[#1b2d4f] text-[#f2ede4] py-2 rounded-full hover:bg-[#2f5d8c] transition-colors"
-                >
-                  Quero pedir
-                </button>
+  <p className="text-sm text-[#2f5d8c] mb-4">
+    {product.description}
+  </p>
 
-                <div className="flex items-center gap-2 text-xs text-[#2f5d8c] mt-3">
-                  <Clock className="w-4 h-4" />
-                  <span>{product.productionTime}</span>
-                </div>
+  {product.highlight && (
+    <Badge variant="outline" className="mb-4 border-[#a898c0] text-[#a898c0]">
+      {product.highlight}
+    </Badge>
+  )}
 
-              </CardContent>
+  {/* BOTÃO */}
+  <button
+    onClick={() => {
+      setSelectedProduct(product);
+      setAroma("");
+      setDecoracao("");
+    }}
+    className="mt-4 w-full text-sm font-medium bg-[#1b2d4f] text-[#f2ede4] py-2 rounded-full hover:bg-[#2f5d8c] transition-colors"
+  >
+    Quero pedir
+  </button>
+
+  {/* PRAZO */}
+  <div className="flex items-center gap-2 text-xs text-[#2f5d8c] mt-3">
+    <Clock className="w-4 h-4" />
+    <span>Prazo de produção: {product.productionTime}</span>
+  </div>
+</CardContent>
+              
             </Card>
           ))}
         </div>
