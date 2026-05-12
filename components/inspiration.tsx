@@ -60,7 +60,7 @@ const inspirations = [
   },
   {
   title: "Reggae Power",
-  description: "acende essa vibe • leve • herbal • energia que flui no ar",
+  description: "Acende essa vibe • Leve • Herbal • Energia que flui no ar",
   image: "/reggae.jpeg",
   position: "center",
   },
