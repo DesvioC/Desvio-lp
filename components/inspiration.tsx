@@ -101,7 +101,7 @@ export function Inspiration() {
           {inspirations.map((item) => (
             <Card
               key={item.title}
-              className="group overflow-hidden border-[#d4c9ae] hover:shadow-xl transition-all duration-300"
+              className="group overflow-hidden border-[#d4c9ae] hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="aspect-square relative overflow-hidden bg-[#f2ede4]">
                 <Image
