@@ -23,7 +23,7 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Image side */}
           <div className="relative">
-            <div className="rounded-2xl overflow-hidden shadow-xl relative h-[550px]">
+            <div className="rounded-2xl overflow-hidden shadow-xl relative h-[300px] lg:h-[550px]">
               <Image
                 src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/produ%C3%A7%C3%A3o-WpL9zsHqNKIljKiblO16oXsAnGlZIX.jpeg"
                 alt="Produção artesanal de velas DESVIO"
