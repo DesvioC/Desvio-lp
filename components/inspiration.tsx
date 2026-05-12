@@ -108,7 +108,7 @@ export function Inspiration() {
                   src={item.image}
                   alt={item.title}
                   fill
-                  className="object-cover"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                   style={{ objectPosition: item.position }}
                 />
                 <Watermark />
