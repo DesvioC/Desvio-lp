@@ -83,7 +83,7 @@ function Watermark() {
 
 export function Inspiration() {
   return (
-    <section className="py-24 bg-[#d4c9ae]/20">
+    <section id="inspiracao" className="py-24 bg-[#d4c9ae]/20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-sm uppercase tracking-[0.3em] text-[#2a7a72] font-medium mb-4">
