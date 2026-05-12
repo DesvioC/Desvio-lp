@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import { ScrollToTop } from '@/components/scroll-to-top'
 import './globals.css'
 
+
 const playfair = Playfair_Display({ 
   subsets: ["latin"],
   variable: '--font-serif',
