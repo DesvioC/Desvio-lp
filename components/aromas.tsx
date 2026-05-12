@@ -150,11 +150,11 @@ export function Aromas() {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:overflow-visible">
           {filteredAromas.map((aroma) => (
             <Card
               key={aroma.name}
-              className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+              className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 snap-start shrink-0 w-[75vw] sm:w-auto"
             >
               <CardContent className="p-6">
                 <div
