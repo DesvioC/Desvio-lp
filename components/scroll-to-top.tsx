@@ -16,7 +16,7 @@ export function ScrollToTop() {
       onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       aria-label="Voltar ao topo"
       className={`
-        fixed bottom-6 right-5 z-50
+        fixed bottom-24 right-5 z-50
         w-11 h-11 rounded-full
         bg-[#1b2d4f] text-[#f2ede4]
         flex items-center justify-center shadow-lg
