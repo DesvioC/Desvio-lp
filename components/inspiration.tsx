@@ -58,6 +58,12 @@ const inspirations = [
     image: "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/BTS%20ARIRANG-3wBIHjFmM71ZrTESNaXGCgGMgYvC54.png",
     position: "center 35%",
   },
+  {
+  title: "Reggae Power",
+  description: "acende essa vibe • leve • herbal • energia que flui no ar",
+  image: "/reggae.jpeg",
+  position: "center",
+  },
 ];
 
 // Watermark component
