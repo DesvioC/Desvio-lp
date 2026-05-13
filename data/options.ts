@@ -89,29 +89,36 @@ export const decoracoes = [
   {
     name: "Simples",
     description: "Design clean e elegante, perfeito para qualquer ambiente.",
+    icon: "sparkles",
   },
   {
     name: "Colorida",
     description: "Cores vibrantes que trazem alegria e personalidade.",
+    icon: "palette",
   },
   {
     name: "Marmorizada",
     description: "Efeito sofisticado com texturas únicas e elegantes.",
+    icon: "gem",
   },
   {
     name: "Areia e Conchas",
     description: "Toque praiano com elementos naturais do mar.",
+    icon: "shell",
   },
   {
     name: "Com Cristais",
     description: "Brilho extra com cristais decorativos especiais.",
-  },
-  {
-    name: "Corações ou Flores em cera",
-    description: "Perfeita para aquele toque especial (margaridas, rosas, jasmim, cerejeira, folhas, etc).",
+    icon: "gem",
   },
   {
     name: "Flores e Ervas",
     description: "Decoração natural com pétalas e ervas aromáticas.",
+    icon: "leaf",
+  },
+  {
+    name: "Corações",
+    description: "Perfeita para presentes românticos e ocasiões especiais.",
+    icon: "heart",
   },
 ];
