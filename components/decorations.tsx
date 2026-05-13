@@ -1,6 +1,7 @@
 import { Card, CardContent } from "@/components/ui/card";
 import { Sparkles, Heart, Shell, Gem, Leaf, Palette, Flower } from "lucide-react";
 import { decoracoes } from "@/data/options";
+
 const iconMap = {
   sparkles: Sparkles,
   palette: Palette,
@@ -30,25 +31,29 @@ export function Decorations() {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
           {decoracoes.map((decoration) => {
-            <Card
-              key={decoration.name}
-              className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
-            >
-              <CardContent className="p-6">
-                <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#2a7a72]/10 flex items-center justify-center group-hover:bg-[#2a7a72]/20 transition-colors">
-                  const Icon = iconMap[decoration.icon];
+            const Icon = iconMap[decoration.icon as keyof typeof iconMap];
 
-<Icon className="w-7 h-7 text-[#2a7a72]" />
-                </div>
-                <h3 className="font-serif text-lg font-bold text-[#1b2d4f] mb-2">
-                  {decoration.name}
-                </h3>
-                <p className="text-sm text-[#2f5d8c] text-pretty">
-                  {decoration.description}
-                </p>
-              </CardContent>
-            </Card>
-        })}
+            return (
+              <Card
+                key={decoration.name}
+                className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
+              >
+                <CardContent className="p-6">
+                  <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#2a7a72]/10 flex items-center justify-center group-hover:bg-[#2a7a72]/20 transition-colors">
+                    <Icon className="w-7 h-7 text-[#2a7a72]" />
+                  </div>
+
+                  <h3 className="font-serif text-lg font-bold text-[#1b2d4f] mb-2">
+                    {decoration.name}
+                  </h3>
+
+                  <p className="text-sm text-[#2f5d8c] text-pretty">
+                    {decoration.description}
+                  </p>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         <div className="mt-12 text-center">
