@@ -116,9 +116,9 @@ export const decoracoes = [
     description: "Perfeita para aquele toque especial (margaridas, rosas, jasmim, cerejeira, folhas, etc).",
     icon: "flower",
   },
-{
+  {
     name: "Flores e Ervas",
     description: "Decoração natural com pétalas e ervas aromáticas.",
     icon: "leaf",
-},
-  ];
+  },
+];
