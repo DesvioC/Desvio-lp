@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
+import { aromas } from "@/data/options";
 
 const categories = [
   { name: "Todos", color: "bg-[#1b2d4f]", hoverColor: "hover:bg-[#1b2d4f]/80", textColor: "text-white" },
@@ -11,93 +12,6 @@ const categories = [
   { name: "Floral", color: "bg-[#a898c0]", hoverColor: "hover:bg-[#a898c0]/80", textColor: "text-white" },
   { name: "Adocicado", color: "bg-[#6b1d2c]", hoverColor: "hover:bg-[#6b1d2c]/80", textColor: "text-white" },
   { name: "Marinho", color: "bg-[#2f5d8c]", hoverColor: "hover:bg-[#2f5d8c]/80", textColor: "text-white" },
-];
-
-const aromas = [
-  {
-    name: "Capim Limão",
-    description: "Cítrico, fresco e revigorante. Como um dia ensolarado em forma de aroma.",
-    categories: ["Herbal", "Cítrico"],
-    color: "bg-[#2a7a72]/20",
-    iconColor: "text-[#2a7a72]",
-  },
-  {
-    name: "Bambu",
-    description: "Herbal e levemente cítrico. Equilibrada, fresca e versátil — a favorita do público.",
-    categories: ["Herbal", "Floral"],
-    color: "bg-[#2a7a72]/30",
-    iconColor: "text-[#2a7a72]",
-  },
-  {
-    name: "Cascas e Folhas",
-    description: "Verbena e lavanda com fundo de cedro. Frescor de natureza para dias frios.",
-    categories: ["Herbal", "Cítrico"],
-    color: "bg-[#2a7a72]/15",
-    iconColor: "text-[#2a7a72]",
-  },
-  {
-    name: "Verde Vivo",
-    description: "Grama fresca com toque de jasmim. Revigorante e puro como um jardim após a chuva.",
-    categories: ["Herbal"],
-    color: "bg-[#2a7a72]/25",
-    iconColor: "text-[#2a7a72]",
-  },
-  {
-    name: "Brisa do Mar",
-    description: "Com toque floral e frutado. Fresca, limpa e aconchegante.",
-    categories: ["Marinho"],
-    color: "bg-[#2f5d8c]/20",
-    iconColor: "text-[#2f5d8c]",
-  },
-  {
-    name: "Flor de Cerejeira",
-    description: "Delicada e levemente amadeirada. Transmite harmonia, paz e amor.",
-    categories: ["Floral"],
-    color: "bg-[#a898c0]/30",
-    iconColor: "text-[#a898c0]",
-  },
-  {
-    name: "Névoa Suave",
-    description: "Lima e flor de laranjeira, com fundo amadeirado de sândalo e musgo. Sofisticado e aconchegante.",
-    categories: ["Floral", "Oriental - Amadeirado"],
-    color: "bg-[#a898c0]/20",
-    iconColor: "text-[#a898c0]",
-  },
-  {
-    name: "Chá Branco",
-    description: "Suave e delicado como uma xícara quente. Traz bem-estar, tranquilidade e paz interior.",
-    categories: ["Floral"],
-    color: "bg-[#a898c0]/25",
-    iconColor: "text-[#a898c0]",
-  },
-  {
-    name: "Baunilha",
-    description: "Framboesa e caramelo com fundo de baunilha. Doce, íntimo e irresistível.",
-    categories: ["Adocicado", "Especiado"],
-    color: "bg-[#6b1d2c]/15",
-    iconColor: "text-[#6b1d2c]",
-  },
-  {
-    name: "Coco",
-    description: "Coco e canela com toque de baunilha. Quente, doce e cheio de memória afetiva.",
-    categories: ["Adocicado", "Especiado"],
-    color: "bg-[#6b1d2c]/20",
-    iconColor: "text-[#6b1d2c]",
-  },
-  {
-    name: "Cacau & Rum",
-    description: "Chocolate belga e rum com fundo de cacau e avelã. Indulgente e sofisticado.",
-    categories: ["Adocicado", "Especiado"],
-    color: "bg-[#6b1d2c]/25",
-    iconColor: "text-[#6b1d2c]",
-  },
-  {
-    name: "Morango com Chantilly",
-    description: "Morango fresco com fundo de chantilly e caramelo. Leve, doce e irresistível.",
-    categories: ["Adocicado", "Frutado"],
-    color: "bg-[#6b1d2c]/15",
-    iconColor: "text-[#6b1d2c]",
-  },
 ];
 
 export function Aromas() {
