@@ -5,6 +5,7 @@ import { useRef, useState, useEffect } from "react";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Clock, ChevronRight } from "lucide-react";
+import { aromas, decoracoes } from "@/data/options";
 
 const products = [
   {
@@ -218,9 +219,12 @@ export function Products() {
           className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
         >
           <option value="">Selecione um aroma</option>
-          <option>Madeira Negra</option>
-          <option>Flor de Cerejeira</option>
-          <option>Baunilha</option>
+<option value="">Selecione um aroma</option>
+{aromas.map((item) => (
+  <option key={item} value={item}>
+    {item}
+  </option>
+))}
         </select>
         <p className="text-[11px] mt-1">
   <button
@@ -259,9 +263,11 @@ onClick={() => {
     className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
   >
     <option value="">Selecione a decoração</option>
-    <option>Com cristais</option>
-    <option>Minimalista</option>
-    <option>Personalizada</option>
+{decoracoes.map((item) => (
+  <option key={item} value={item}>
+    {item}
+  </option>
+))}
   </select>
    <p className="text-[11px] mt-1">
     <button
