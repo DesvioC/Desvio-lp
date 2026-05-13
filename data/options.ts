@@ -120,5 +120,5 @@ export const decoracoes = [
     name: "Flores e Ervas",
     description: "Decoração natural com pétalas e ervas aromáticas.",
     icon: "leaf",
-}
+},
   ];
