@@ -220,8 +220,8 @@ export function Products() {
         >
           <option value="">Escolha seu aroma</option>
 {aromas.map((item) => (
-  <option key={item} value={item}>
-    {item}
+  <option key={item.name} value={item.name}>
+    {item.name}
   </option>
 ))}
         </select>
@@ -263,8 +263,8 @@ onClick={() => {
   >
     <option value="">Escolha sua decoração</option>
 {decoracoes.map((item) => (
-  <option key={item} value={item}>
-    {item}
+  <option key={item.name} value={item.name}>
+    {item.name}
   </option>
 ))}
   </select>
