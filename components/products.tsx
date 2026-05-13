@@ -219,7 +219,6 @@ export function Products() {
           className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
         >
           <option value="">Selecione um aroma</option>
-<option value="">Selecione um aroma</option>
 {aromas.map((item) => (
   <option key={item} value={item}>
     {item}
