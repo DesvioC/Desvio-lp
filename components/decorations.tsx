@@ -29,14 +29,16 @@ export function Decorations() {
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 lg:gap-6">
-          {decorations.map((decoration) => (
+          {decoracoes.map((decoration) => {
             <Card
               key={decoration.name}
               className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 text-center"
             >
               <CardContent className="p-6">
                 <div className="w-14 h-14 mx-auto mb-4 rounded-full bg-[#2a7a72]/10 flex items-center justify-center group-hover:bg-[#2a7a72]/20 transition-colors">
-                  <decoration.icon className="w-7 h-7 text-[#2a7a72]" />
+                  const Icon = iconMap[decoration.icon];
+
+<Icon className="w-7 h-7 text-[#2a7a72]" />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-[#1b2d4f] mb-2">
                   {decoration.name}
@@ -46,7 +48,7 @@ export function Decorations() {
                 </p>
               </CardContent>
             </Card>
-          ))}
+        })}
         </div>
 
         <div className="mt-12 text-center">
