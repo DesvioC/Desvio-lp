@@ -218,7 +218,7 @@ export function Products() {
           onChange={(e) => setAroma(e.target.value)}
           className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
         >
-          <option value="">Selecione um aroma</option>
+          <option value="">Escolha seu aroma</option>
 {aromas.map((item) => (
   <option key={item} value={item}>
     {item}
@@ -261,7 +261,7 @@ onClick={() => {
     onChange={(e) => setDecoracao(e.target.value)}
     className="w-full border border-[#d4c9ae] rounded-lg px-3 py-2 text-sm"
   >
-    <option value="">Selecione a decoração</option>
+    <option value="">Escolha sua decoração</option>
 {decoracoes.map((item) => (
   <option key={item} value={item}>
     {item}
