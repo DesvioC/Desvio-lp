@@ -112,13 +112,12 @@ export const decoracoes = [
     icon: "gem",
   },
   {
+    name: "Corações ou Flores em cera",
+    description: "Perfeita para aquele toque especial (margaridas, rosas, jasmim, cerejeira, folhas, etc).",
+    icon: "flower",
+  },
+{
     name: "Flores e Ervas",
     description: "Decoração natural com pétalas e ervas aromáticas.",
     icon: "leaf",
-  },
-  {
-    name: "Corações",
-    description: "Perfeita para presentes românticos e ocasiões especiais.",
-    icon: "heart",
-  },
-];
+}
