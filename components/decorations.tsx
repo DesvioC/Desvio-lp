@@ -1,7 +1,15 @@
 import { Card, CardContent } from "@/components/ui/card";
-import { Sparkles, Heart, Shell, Gem, Leaf, Palette } from "lucide-react";
+import { Sparkles, Heart, Shell, Gem, Leaf, Palette, Flower } from "lucide-react";
 import { decoracoes } from "@/data/options";
-
+const iconMap = {
+  sparkles: Sparkles,
+  palette: Palette,
+  gem: Gem,
+  shell: Shell,
+  leaf: Leaf,
+  heart: Heart,
+  flower: Flower,
+};
 
 export function Decorations() {
   return (
