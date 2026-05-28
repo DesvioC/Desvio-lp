@@ -177,7 +177,7 @@ export function Products() {
     }}
     className="mt-4 w-full text-sm font-medium bg-[#1b2d4f] text-[#f2ede4] py-2 rounded-full hover:bg-[#2f5d8c] transition-colors"
   >
-    Quero pedir
+    Criar minha vela
   </button>
 
   {/* PRAZO */}
@@ -218,7 +218,7 @@ export function Products() {
       </h3>
 
       <p className="text-xs text-[#2f5d8c] text-center mb-5">
-        Criar minha vela
+        Personalize sua vela
       </p>
 
       <div className="mb-3">
