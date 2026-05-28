@@ -218,7 +218,7 @@ export function Products() {
       </h3>
 
       <p className="text-xs text-[#2f5d8c] text-center mb-5">
-        Personalize sua vela
+        Criar minha vela
       </p>
 
       <div className="mb-3">
