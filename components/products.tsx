@@ -114,6 +114,7 @@ export function Products() {
   </div>
 </div>
 
+      
         <div className="flex items-center gap-2 text-[#2f5d8c] text-sm mb-3 md:hidden">
           <span>Deslize para ver mais</span>
           <ChevronRight className="w-4 h-4 animate-bounce-x" />
