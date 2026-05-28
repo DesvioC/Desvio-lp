@@ -96,14 +96,23 @@ export function Products() {
     <section id="produtos" className="py-24 bg-[#d4c9ae]/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-        <div className="text-center mb-16">
-          <p className="text-sm uppercase tracking-[0.3em] text-[#2a7a72] font-medium mb-4">
-            Nossa Coleção
-          </p>
-          <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1b2d4f] mb-6 text-balance">
-            Encontre a vela perfeita para você
-          </h2>
-        </div>
+       <div className="text-center mb-16">
+  <p className="text-sm uppercase tracking-[0.3em] text-[#2a7a72] font-medium mb-4">
+    Nossa Coleção
+  </p>
+
+  <h2 className="font-serif text-3xl sm:text-4xl md:text-5xl font-bold text-[#1b2d4f] mb-6 text-balance">
+    Encontre a vela perfeita para você
+  </h2>
+
+  <div className="mt-6 text-xs text-[#2f5d8c] flex justify-center gap-3 tracking-wide"
+    <span>Escolha o modelo</span>
+    <span>•</span>
+    <span>Personalize</span>
+    <span>•</span>
+    <span>Finalize pelo WhatsApp</span>
+  </div>
+</div>
 
         <div className="flex items-center gap-2 text-[#2f5d8c] text-sm mb-3 md:hidden">
           <span>Deslize para ver mais</span>
