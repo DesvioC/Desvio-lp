@@ -105,7 +105,7 @@ export function Products() {
     Encontre a vela perfeita para você
   </h2>
 
-  <div className="mt-6 text-xs text-[#2f5d8c] flex justify-center gap-3 tracking-wide"
+  <div className="mt-6 text-xs text-[#2f5d8c] flex justify-center gap-3 tracking-wide">
     <span>Escolha o modelo</span>
     <span>•</span>
     <span>Personalize</span>
