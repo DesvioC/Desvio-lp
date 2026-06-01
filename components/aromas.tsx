@@ -1,10 +1,19 @@
 "use client";
 
 import { useState } from "react";
-import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { cn } from "@/lib/utils";
 import { aromas } from "@/data/options";
+import { Card, CardContent } from "@/components/ui/card";
+import { Leaf, Flower, Waves, Flame, Sparkles } from "lucide-react";
+
+const iconMap = {
+  leaf: Leaf,
+  flower: Flower,
+  waves: Waves,
+  flame: Flame,
+  sparkles: Sparkles,
+};
 
 const categories = [
   { name: "Todos", color: "bg-[#1b2d4f]", hoverColor: "hover:bg-[#1b2d4f]/80", textColor: "text-white" },
@@ -65,7 +74,10 @@ export function Aromas() {
         </div>
 
         <div className="flex overflow-x-auto snap-x snap-mandatory gap-4 pb-4 md:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 md:overflow-visible">
-          {filteredAromas.map((aroma) => (
+         {filteredAromas.map((aroma) => {
+  const Icon = iconMap[aroma.icon as keyof typeof iconMap];
+
+  return (
             <Card
               key={aroma.name}
               className="group bg-white border-[#d4c9ae] hover:shadow-lg transition-all duration-300 hover:-translate-y-1 snap-start shrink-0 w-[75vw] sm:w-auto"
@@ -77,9 +89,7 @@ export function Aromas() {
                     aroma.color
                   )}
                 >
-                  <svg className={cn("w-8 h-8", aroma.iconColor)} fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
-                  </svg>
+                <Icon className={cn("w-8 h-8", aroma.iconColor)} />
                 </div>
                 <h3 className="font-serif text-lg font-bold text-[#1b2d4f] mb-2">
                   {aroma.name}
@@ -103,7 +113,8 @@ export function Aromas() {
                         {cat}
                       </Badge>
                     );
-                  })}
+                 );
+})}
                 </div>
               </CardContent>
             </Card>
