@@ -5,6 +5,7 @@ export const aromas = [
     categories: ["Herbal", "Cítrico"],
     color: "bg-[#2a7a72]/20",
     iconColor: "text-[#2a7a72]",
+    icon: "leaf",
   },
   {
     name: "Bambu",
@@ -12,6 +13,7 @@ export const aromas = [
     categories: ["Herbal", "Floral"],
     color: "bg-[#2a7a72]/30",
     iconColor: "text-[#2a7a72]",
+    icon: "leaf",
   },
   {
     name: "Cascas e Folhas",
@@ -19,6 +21,7 @@ export const aromas = [
     categories: ["Herbal", "Cítrico"],
     color: "bg-[#2a7a72]/15",
     iconColor: "text-[#2a7a72]",
+    icon: "leaf",
   },
   {
     name: "Verde Vivo",
@@ -26,6 +29,7 @@ export const aromas = [
     categories: ["Herbal"],
     color: "bg-[#2a7a72]/25",
     iconColor: "text-[#2a7a72]",
+    icon: "leaf",
   },
   {
     name: "Brisa do Mar",
@@ -33,6 +37,7 @@ export const aromas = [
     categories: ["Marinho"],
     color: "bg-[#2f5d8c]/20",
     iconColor: "text-[#2f5d8c]",
+    icon: "waves",
   },
   {
     name: "Flor de Cerejeira",
@@ -40,6 +45,7 @@ export const aromas = [
     categories: ["Floral"],
     color: "bg-[#a898c0]/30",
     iconColor: "text-[#a898c0]",
+    icon: "flower",
   },
   {
     name: "Névoa Suave",
@@ -47,6 +53,7 @@ export const aromas = [
     categories: ["Floral", "Oriental - Amadeirado"],
     color: "bg-[#a898c0]/20",
     iconColor: "text-[#a898c0]",
+    icon: "sparkles",
   },
   {
     name: "Chá Branco",
@@ -54,6 +61,7 @@ export const aromas = [
     categories: ["Floral"],
     color: "bg-[#a898c0]/25",
     iconColor: "text-[#a898c0]",
+    icon: "flower",
   },
   {
     name: "Baunilha",
@@ -61,6 +69,7 @@ export const aromas = [
     categories: ["Adocicado", "Especiado"],
     color: "bg-[#6b1d2c]/15",
     iconColor: "text-[#6b1d2c]",
+    icon: "flame",
   },
   {
     name: "Coco",
@@ -68,6 +77,7 @@ export const aromas = [
     categories: ["Adocicado", "Especiado"],
     color: "bg-[#6b1d2c]/20",
     iconColor: "text-[#6b1d2c]",
+    icon: "flame",
   },
   {
     name: "Cacau & Rum",
@@ -75,6 +85,7 @@ export const aromas = [
     categories: ["Adocicado", "Especiado"],
     color: "bg-[#6b1d2c]/25",
     iconColor: "text-[#6b1d2c]",
+    icon: "flame",
   },
   {
     name: "Morango com Chantilly",
@@ -82,6 +93,7 @@ export const aromas = [
     categories: ["Adocicado", "Frutado"],
     color: "bg-[#6b1d2c]/15",
     iconColor: "text-[#6b1d2c]",
+    icon: "sparkles",
   },
 ];
 
