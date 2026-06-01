@@ -120,7 +120,8 @@ export function Aromas() {
                 
               </CardContent>
             </Card>
-          ))}
+                   );
+        })}
         </div>
       </div>
     </section>
