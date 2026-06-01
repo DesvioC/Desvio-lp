@@ -97,7 +97,8 @@ export function Aromas() {
                 <p className="text-sm text-[#2f5d8c] mb-4 text-pretty">
                   {aroma.description}
                 </p>
-              <div className="flex flex-wrap gap-1">
+
+<div className="flex flex-wrap gap-1">
   {aroma.categories.map((cat) => {
     const catData = getCategoryColor(cat.split(" ")[0]);
 
@@ -116,6 +117,7 @@ export function Aromas() {
     );
   })}
 </div>
+                
               </CardContent>
             </Card>
           ))}
