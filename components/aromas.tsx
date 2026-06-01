@@ -97,25 +97,25 @@ export function Aromas() {
                 <p className="text-sm text-[#2f5d8c] mb-4 text-pretty">
                   {aroma.description}
                 </p>
-                <div className="flex flex-wrap gap-1">
-                  {aroma.categories.map((cat) => {
-                    const catData = getCategoryColor(cat.split(' ')[0]);
-                    return (
-                      <Badge
-                        key={cat}
-                        variant="outline"
-                        className="text-xs"
-                        style={{ 
-                          borderColor: catData.color.replace('bg-[', '').replace(']', ''),
-                          color: catData.color.replace('bg-[', '').replace(']', '')
-                        }}
-                      >
-                        {cat}
-                      </Badge>
-                    );
-                 );
-})}
-                </div>
+              <div className="flex flex-wrap gap-1">
+  {aroma.categories.map((cat) => {
+    const catData = getCategoryColor(cat.split(" ")[0]);
+
+    return (
+      <Badge
+        key={cat}
+        variant="outline"
+        className="text-xs"
+        style={{
+          borderColor: catData.color.replace("bg-[", "").replace("]", ""),
+          color: catData.color.replace("bg-[", "").replace("]", ""),
+        }}
+      >
+        {cat}
+      </Badge>
+    );
+  })}
+</div>
               </CardContent>
             </Card>
           ))}
